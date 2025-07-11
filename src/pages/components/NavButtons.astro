@@ -1,0 +1,27 @@
+---
+const buttonsTop = [
+  { label: 'Design', href: '#design', color: '#8000ff' },      // Purple
+  { label: 'Home', href: '#home', color: '#e1ff06' },          // Green
+  { label: 'Development', href: '#dev', color: '#e012e6' },    // Yellow
+];
+
+const buttonsBottom = [
+  { label: 'Bio', href: '#bio', color: '#ff671e' },            // Orange
+  { label: 'Contact', href: '#contact', color: '#cecece' },    // Grey
+  { label: 'Work', href: '#work', color: '#287ffe' },          // Blue
+];
+---
+
+<div class="nav-wrapper">
+  <div class="nav-row">
+    {buttonsTop.map((btn) => (
+      <a href={btn.href} class="nav-btn" style={`background-color: ${btn.color}`}>{btn.label}</a>
+    ))}
+  </div>
+  <div class="nav-row">
+    {buttonsBottom.map((btn) => (
+      <a href={btn.href} class="nav-btn" style={`background-color: ${btn.color}`}>{btn.label}</a>
+    ))}
+  </div>
+</div>
+
