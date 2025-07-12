@@ -97,7 +97,7 @@ body {
 }
 
 .nav-btn:hover {
-  animation: flipY 5s linear infinite;
+  animation: flipY 2s linear infinite;
   transform-style: preserve-3d;
 }
 
@@ -107,3 +107,8 @@ body {
 .nav-4 { bottom: 5%; left: 50%; transform: translateX(-50%); }
 .nav-5 { bottom: 5%; left: 20%; }
 .nav-6 { bottom: 5%; left: 80%; }
+
+html {
+  scroll-behavior: smooth;
+}
+
