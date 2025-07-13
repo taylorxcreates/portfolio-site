@@ -33,6 +33,45 @@ import NavButtons from "./components/NavButtons.astro";
         </div>
       </section>
 
+        <!-- Design Subsection -->
+        <div id="design" class="work-subsection">
+          <h3>Design</h3>
+          <div class="work-grid">
+            <div class="project-card" onclick="loadCaseStudy('design-project-1')">
+              <img src="/Images/portfolio-project.png" alt="Portfolio Project" class="project-image" />
+              <div class="project-overlay">
+                <h4 class="project-title">Portfolio<br>Project</h4>
+              </div>
+            </div>
+            <div class="project-card" onclick="loadCaseStudy('design-project-2')">
+              <img src="/Images/movie-database-prototype.png" alt="Movie Database Prototype Design" class="project-image" />
+              <div class="project-overlay">
+                <h4 class="project-title">Prototype<br>Design</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dev Subsection -->
+        <div id="development" class="work-subsection">
+          <h3>Development</h3>
+          <div class="work-grid">
+            <div class="project-card" onclick="loadCaseStudy('dev-project-1')">
+              <img src="/Images/movie-database.png" alt="React Movie Database" class="project-image" />
+              <div class="project-overlay">
+                <h4 class="project-title">Movie<br>Database</h4>
+              </div>
+            </div>
+            <div class="project-card" onclick="loadCaseStudy('dev-project-2')">
+              <img src="/Images/cosmic-crust.png" alt="Pizza themed WordPress Website " class="project-image" />
+              <div class="project-overlay">
+                <h4 class="project-title">Cosmic<br>Crust</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" class="section">
         <h2>Let's Chat!</h2>
         <p>Thanks for checking out my portfolio. If you think I'd be someone you'd love to work with or have on your team, you can email me directly! <br>Don't forget to check out my GitHub to see what I've been up to :)</p>
@@ -40,7 +79,7 @@ import NavButtons from "./components/NavButtons.astro";
         <p><a href="https://github.com/taylorxcreates" target="_blank" style="color:#5bf936; text-decoration:underline;">Visit my GitHub</a></p>
       </section>
 
-    </main>
-
-  </body>
+     </main>
+   </body>
+  <script type="module" src="/src/scripts/main.js"></script>
 </html>
