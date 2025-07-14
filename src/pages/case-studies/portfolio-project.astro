@@ -1,0 +1,68 @@
+---
+import "../styles/case-study.css";
+import NavButtons from "../components/NavButtons.astro";
+
+const title = "Portfolio Website";
+const mainImage = "/Images/portfolio-project.png";
+const githubLink = "https://github.com/taylorxcreates/portfolio";
+const liveLink = "https://taylorxcreates.com";
+const tools = ["Astro", "HTML", "CSS", "JavaScript", "FTP", "SiteGround"];
+const description = `
+This personal portfolio site was designed and developed from scratch using the Astro framework and deployed live on SiteGround with manual file management via FTP.
+
+The site structure is built with clean HTML5 semantics, modular CSS for maintainability, and lightweight JavaScript enhancements to improve user interactivity and animations. I customized the layout and hero animations for visual impact while keeping the experience responsive and accessible across devices.
+
+Version control was handled via GitHub, and the final site was uploaded using FileZilla FTP for precision and direct hosting integration. This project demonstrates my ability to independently plan, design, code, and deploy a production-ready website end-to-end — showcasing strong front-end development skills and attention to performance, scalability, and polish.
+`;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title} | Case Study</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/global.css" />
+  </head>
+
+  <body>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="overlay"></div>
+      <h1 class="title">{title}</h1>
+      <NavButtons />
+    </section>
+
+    <main class="content">
+      <!-- Main Image -->
+      <section class="section">
+        <img src={mainImage} alt={`${title} Screenshot`} style="width: 100%; max-width: 1000px; border: 10px solid black; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);" />
+      </section>
+
+      <!-- Details Section -->
+      <section class="section" style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; max-width: 1200px; width: 100%; padding: 4rem 2rem;">
+        <!-- Tools & Links -->
+        <div style="background: black; padding: 2rem; border: 10px solid #5bf936; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);">
+          <h2 style="color: #5bf936; font-family: 'Bebas Neue', sans-serif; font-size: 2rem; margin-bottom: 1rem;">Tools Used</h2>
+          <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0;">
+            {tools.map(tool => (
+              <li style="color: white; font-family: 'Roboto', sans-serif; font-size: 1.1rem; margin-bottom: 0.5rem;">• {tool}</li>
+            ))}
+          </ul>
+
+          <a href={githubLink} target="_blank" style="display: inline-block; color: #5bf936; text-decoration: underline; margin-bottom: 1rem;">GitHub Repo</a><br />
+          <a href={liveLink} target="_blank" style="display: inline-block; color: #5bf936; text-decoration: underline;">Live Site</a>
+        </div>
+
+        <div style="background: #000000; padding: 2rem; border: 10px solid #287ffe; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);">
+          <h2 style="color: #287ffe; font-family: 'Bebas Neue', sans-serif; font-size: 2rem; margin-bottom: 1rem;">Case Study</h2>
+          <p style="color: white; font-family: 'Roboto', sans-serif; font-size: 1.1rem; line-height: 1.8; white-space: pre-line;">{description}</p>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./scripts/main.js"></script>
+  </body>
+</html>
